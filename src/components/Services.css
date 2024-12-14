@@ -1,0 +1,563 @@
+.services {
+  padding: 2rem;
+}
+
+.services h1 {
+  text-align: center;
+  color: #2c5282;
+  margin-bottom: 2rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.service-card {
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background: white;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.learn-more {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 1rem;
+  }
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-icon {
+  font-size: 2.5rem;
+}
+
+.modal-description {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.features-list {
+  background-color: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.features-list h3 {
+  margin-bottom: 1rem;
+  color: #2c5282;
+}
+
+.features-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.features-list li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.features-list li:before {
+  content: "✓";
+  color: #4CAF50;
+  position: absolute;
+  left: 0;
+}
+
+/* Contact Section Styles */
+.contact-section {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.contact-section h2 {
+  color: #2c5282;
+  margin-bottom: 1rem;
+}
+
+.contact-section p {
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.contact-button {
+  padding: 1rem 2rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    padding: 1.5rem;
+  }
+  
+  .contact-section {
+    margin-top: 2rem;
+    padding: 1.5rem;
+  }
+}
+
+/* Add these new styles to your existing Services.css */
+
+.weather-forecast {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.forecast-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.summary-item h4 {
+  color: #2c5282;
+  margin-bottom: 0.5rem;
+}
+
+.summary-item p {
+  color: #666;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.forecast-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.forecast-date {
+  font-weight: bold;
+  color: #2c5282;
+  margin-bottom: 0.5rem;
+}
+
+.forecast-condition {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.forecast-condition span {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.forecast-temp {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #4CAF50;
+  margin: 0.5rem 0;
+}
+
+.forecast-details {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.forecast-details div {
+  margin: 0.25rem 0;
+}
+
+.forecast-advisory {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px solid #eee;
+}
+
+.warning {
+  color: #e53e3e;
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+}
+
+@media (max-width: 768px) {
+  .forecast-summary {
+    grid-template-columns: 1fr;
+  }
+  
+  .forecast-grid {
+    grid-template-columns: repeat(7, 200px);
+  }
+}
+
+/* Contact Form Styles */
+.contact-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+
+.contact-form-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .contact-form-container {
+    width: 95%;
+    padding: 1.5rem;
+  }
+}
+
+/* Drone Video Section */
+.drone-video {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.video-container {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.video-container:hover {
+  transform: translateY(-5px);
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-info {
+  padding: 1rem;
+  background: white;
+}
+
+.video-info h4 {
+  color: #2c5282;
+  margin-bottom: 0.5rem;
+}
+
+.video-info p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Weather Forecast Section */
+.weather-forecast {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.forecast-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.forecast-date {
+  font-weight: bold;
+  color: #2c5282;
+  margin-bottom: 0.5rem;
+}
+
+.forecast-condition {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.forecast-temp {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4CAF50;
+  margin: 0.5rem 0;
+}
+
+.forecast-details {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .forecast-grid {
+    grid-template-columns: repeat(7, 200px);
+  }
+}
+
+.preview-forecast {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: rgba(76, 175, 80, 0.1);
+  border-radius: 5px;
+}
+
+.preview-forecast p {
+  margin: 0;
+  color: #4CAF50;
+  font-weight: 500;
+}
+
+.loading-weather {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.loading-weather p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Image Gallery Styles */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-info {
+  transform: translateY(0);
+}
+
+.gallery-info h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.gallery-info p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.gallery-title {
+  margin: 2rem 0 1rem;
+  color: #2c5282;
+}
+ 
