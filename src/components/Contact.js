@@ -1,7 +1,19 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import { useLanguage } from '../context/LanguageContext';
+import { languages } from '../context/LanguageContext';
 
 function Contact() {
+  const { language } = useLanguage();
+  const text = languages[language];
+
+  const services = [
+    { id: 'soil', title: text.services.soil.title },
+    { id: 'crop', title: text.services.crop.title },
+    { id: 'weather', title: text.services.weather.title },
+    { id: 'drone', title: text.services.drone.title }
+  ];
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -29,7 +41,7 @@ function Contact() {
     <div className="contact-page">
       <div className="contact-container">
         <div className="contact-info">
-          <h1>Contact Us</h1>
+          <h1>{text.contact.title}</h1>
           <p>Get in touch with our expert team for any questions about our smart agriculture services.</p>
           
           <div className="contact-details">
@@ -49,10 +61,10 @@ function Contact() {
         </div>
 
         <div className="contact-form">
-          <h2>Send us a Message</h2>
+          <h2>{text.contact.form.title}</h2>
           <form onSubmit={handleSubmit} onClick={(e) => e.stopPropagation()}>
             <div className="form-group">
-              <label htmlFor="name">Name</label>
+              <label htmlFor="name">{text.contact.form.name}</label>
               <input
                 type="text"
                 id="name"
@@ -62,7 +74,7 @@ function Contact() {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">{text.contact.form.email}</label>
               <input
                 type="email"
                 id="email"
@@ -72,22 +84,23 @@ function Contact() {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="service">Service</label>
+              <label htmlFor="service">{text.contact.form.service}</label>
               <select
                 id="service"
                 value={formData.service}
                 onChange={(e) => setFormData({...formData, service: e.target.value})}
                 required
               >
-                <option value="">Select a service</option>
-                <option value="soil">Soil Analysis</option>
-                <option value="crop">Crop Management</option>
-                <option value="weather">Weather Forecasting</option>
-                <option value="drone">Drone Services</option>
+                <option value="">{language === 'am' ? 'አገልግሎት ይምረጡ' : 'Select a service'}</option>
+                {services.map(service => (
+                  <option key={service.id} value={service.id}>
+                    {service.title}
+                  </option>
+                ))}
               </select>
             </div>
             <div className="form-group">
-              <label htmlFor="message">Message</label>
+              <label htmlFor="message">{text.contact.form.message}</label>
               <textarea
                 id="message"
                 value={formData.message}
@@ -95,7 +108,9 @@ function Contact() {
                 required
               />
             </div>
-            <button type="submit" className="submit-button">Send Message</button>
+            <button type="submit" className="submit-button">
+              {text.contact.form.submit}
+            </button>
           </form>
         </div>
       </div>
