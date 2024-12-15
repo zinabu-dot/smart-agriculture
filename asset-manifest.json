@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/smart-agriculture/static/css/main.7e3393c3.css",
-    "main.js": "/smart-agriculture/static/js/main.59f08ffc.js",
+    "main.css": "/smart-agriculture/static/css/main.ee7f710d.css",
+    "main.js": "/smart-agriculture/static/js/main.e479144d.js",
     "index.html": "/smart-agriculture/index.html",
-    "main.7e3393c3.css.map": "/smart-agriculture/static/css/main.7e3393c3.css.map",
-    "main.59f08ffc.js.map": "/smart-agriculture/static/js/main.59f08ffc.js.map"
+    "main.ee7f710d.css.map": "/smart-agriculture/static/css/main.ee7f710d.css.map",
+    "main.e479144d.js.map": "/smart-agriculture/static/js/main.e479144d.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e3393c3.css",
-    "static/js/main.59f08ffc.js"
+    "static/css/main.ee7f710d.css",
+    "static/js/main.e479144d.js"
   ]
 }
