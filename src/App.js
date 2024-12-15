@@ -9,7 +9,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename="/SmartAgri">
+    <Router basename="/smart-agriculture">
       <div className="App">
         <Navbar />
         <Routes>
