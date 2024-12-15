@@ -1,7 +1,7 @@
 {
   "name": "smart-agriculture",
   "version": "0.1.0",
-  "homepage": "https://zinabu-dot.github.io/smart-agriculture",
+  "homepage": "https://zinabu-dot.github.io/SmartAgri",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
